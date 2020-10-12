@@ -12,3 +12,12 @@ services:
     image: php:7.4-fpm-alpine
     volumes:
       - ./code:/code
+
+  db:
+    image: mysql:5.7
+    environment:
+      MYSQL_DATABASE: 'laravel'
+      MYSQL_USER: 'laravel'
+      MYSQL_PASSWORD: 'sUp4seKr!t'
+    volumes:
+      - db-volume
